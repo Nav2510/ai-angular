@@ -19,4 +19,20 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="List of BREEDS" author="DBA presents">
+        <insert tableName="BREEDS">
+            <column name="BRE_NAME" value="Golden Retriever" />
+        </insert>
+        <insert tableName="BREEDS">
+            <column name="BRE_NAME" value="American Staffordshire Terrier" />
+        </insert>
+        <insert tableNamme="BREEDS">
+            <col name="BRE_NAME" value="German Shepherd Doger" />
+        </insert>
+
+        <rollback>
+            <delete tableName="BREEDS" />
+        </rollback>
+    </changeSet>
+
 </databaseChangeLog>
